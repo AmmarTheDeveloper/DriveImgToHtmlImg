@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Google Drive Link to Download Img Link</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            padding: 20px;
+            width: 400px;
+            background: white;
+            max-width: 100%;
+        }
+
+        form label {
+            display: block;
+            font-size: 16px;
+        }
+
+        form input {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            outline: none;
+            padding-inline: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        form input[type=submit] {
+            background: blue;
+            border: none;
+            margin-top: 5px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        form input[type=submit]:hover {
+            background: darkblue;
+        }
+
+        form .img-container {
+            text-align: center;
+        }
+
+        form .img-container img {
+            width: 250px;
+        }
+
+        form .imgDownloadLink {
+            word-break: break-all;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+
+        .heading {
+            font-size: 20px;
+            max-width: 500px;
+            text-align: center;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Convert Google Drive Share Link to HTML Img Tag src attr or Download Link</h1>
+        <form>
+            <label for="link">Enter your google Drive Link : </label>
+            <input type="text" id="link">
+            <input type="submit">
+            <a href="" class="imgDownloadLink"></a>
+            <div class="img-container"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
